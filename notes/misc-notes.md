@@ -12,11 +12,13 @@ boot app
 ## Spring Actuator
 - Provides insights into running applications, allows for health checks/monitoring
   - `localhost:8080/actuator`
-- health endpoint, simple up/down status
-- beans endpoint, info about beans in app
-- env endpoint, all env vars
-- info endpoint
-- metrics endpoint
+- Out of the box endpoints
+  - health endpoint, simple up/down status
+  - beans endpoint, info about beans in app
+  - env endpoint, all env vars
+  - info endpoint
+  - metrics endpoint
+  - etc
 
 - Ensure actuator endpoints are not publicly available and only enable the endpoints you need
 - Can create new endpoints (room web app - `GreetingEndpoint`)

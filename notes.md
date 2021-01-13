@@ -90,3 +90,7 @@ boot app
 
 ## Spring Boot Starter
 - Library that can be used across an enterprise for standardized implementation and configuration
+
+## Things to follow up on
+- `@Bean` understand this annotation more
+- `@Autowired` understand this annotation more

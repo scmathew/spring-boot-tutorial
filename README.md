@@ -3,16 +3,17 @@
 Sample Spring Boot projects created from a LinkedIn Learning course.
 
 
-## Build
+## Build DB
 ### Start Postgres DB via Docker
 ```bash
 cd bin
 ./start_postgres.sh
 ```
 
-## [Spring Boot Tutorial](boot-tutorial/README.md)
-
-## [Room CLR](room-clr/README.md)
+## Modules
+### [Boot Tutorial](boot-tutorial/README.md)
+### [Room CLR](room-clr/README.md)
+### [Room Web App](room-web-app/README.md)
 
 ## Helpful Links
 - https://start.spring.io/

@@ -78,6 +78,7 @@ boot app
 
 ## Spring Actuator
 - Provides insights into running applications, allows for health checks/monitoring
+  - `localhost:8080/actuator`
 - health endpoint, simple up/down status
 - beans endpoint, info about beans in app
 - env endpoint, all env vars

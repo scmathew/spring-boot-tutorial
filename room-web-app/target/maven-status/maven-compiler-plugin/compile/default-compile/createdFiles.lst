@@ -1,4 +1,6 @@
+com/frankmoley/lil/sbet/landon/roomwebapp/data/RoomRepository.class
 com/frankmoley/lil/sbet/landon/roomwebapp/service/RoomService.class
+com/frankmoley/lil/sbet/landon/roomwebapp/data/StaffRepository.class
 com/frankmoley/lil/sbet/landon/roomwebapp/models/Room.class
 com/frankmoley/lil/sbet/landon/roomwebapp/models/Position$1.class
 com/frankmoley/lil/sbet/landon/roomwebapp/controllers/RoomRestController.class

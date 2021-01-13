@@ -17,7 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // for any http requests matching the pattern permit all requests that are authenticated
         // Configure login page at /login and force there if unauthenticated
 
-        http.authorizeRequests().antMatchers("/", "/api/*").permitAll()
+        http.authorizeRequests().antMatchers("/", "/api/*", "/api/rest/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

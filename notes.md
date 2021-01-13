@@ -87,3 +87,6 @@ boot app
 
 - Ensure actuator endpoints are not publicly available and only enable the endpoints you need
 - Can create new endpoints (room web app - `GreetingEndpoint`)
+
+## Spring Boot Starter
+- Library that can be used across an enterprise for standardized implementation and configuration

@@ -23,6 +23,6 @@ cd bin
 ### [Room Cleaner Notifier](room-cleaner-notifier/README.md)
 
 ## Helpful Links
-- [Notes](notes.md)
+- [Notes](notes/misc-notes.md)
 - https://start.spring.io/
 - [LinkedIn Learning Course](https://www.linkedin.com/learning/spring-boot-2-0-essential-training-2/configuring-embedded-tomcat?u=2079044)

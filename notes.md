@@ -67,3 +67,5 @@ boot app
 - Passwords
   - Should be hashed not encrypted
   - SHA-1 is beaten
+  
+## Spring Boot Messaging

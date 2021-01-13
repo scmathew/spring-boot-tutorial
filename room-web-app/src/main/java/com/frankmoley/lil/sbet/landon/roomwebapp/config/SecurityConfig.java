@@ -14,6 +14,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        // for any http requests matching the pattern permit all requests that are authenticated
+        // Configure login page at /login and force there if unauthenticated
+
         http.authorizeRequests().antMatchers("/", "/api/*").permitAll()
                 .anyRequest().authenticated()
                 .and()

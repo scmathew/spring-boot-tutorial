@@ -8,4 +8,11 @@
 ## Spring Data
 - JpaRepository is built on top of CrudRepository
     - CRUD + flush + saveAndFlush + deleteInBatch + deleteAllInBatch
-
+- Simple Query Method Property Expression Rules 
+    - Return `type`
+    - start with `findBy` (?)
+    - include attribute name of Java obj (camel case)
+        - Ex: `findByAge`
+    - Optionally, chain subattribute names
+        - Ex: `findByAttendeeLastName`
+        - Where attendee is an object on the Student class

@@ -13,6 +13,7 @@
         <module>room-clr</module>
         <module>boot-tutorial</module>
         <module>room-cleaner-notifier</module>
+        <module>university</module>
     </modules>
 
 </project>

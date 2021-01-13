@@ -18,4 +18,8 @@ public class RoomService {
     public List<Room> getAllRooms(){
         return roomRepository.findAll();
     }
+
+    public Room getById(long id) {
+        return roomRepository.findById(id).get();
+    }
 }

@@ -13,7 +13,7 @@ cd bin
 ### Start Rabbit MQ via Docker
 ```bash
 cd bin
-./start_rabbit.sh.sh
+./start_rabbit.sh
 ```
 
 ## Modules

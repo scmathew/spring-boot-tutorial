@@ -3,7 +3,7 @@
 Sample Spring Boot projects created from a LinkedIn Learning course.
 
 
-## Build DB
+## Build Docker Services
 ### Start Postgres DB via Docker
 ```bash
 cd bin

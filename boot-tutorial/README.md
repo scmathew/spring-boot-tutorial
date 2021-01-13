@@ -1,6 +1,7 @@
 # Spring Boot Tutorial
 
 Sample Spring Boot project created from a LinkedIn Learning course.
+How to make a docker container from a Spring Boot app.
 
 ## Build
 

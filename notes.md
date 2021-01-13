@@ -20,6 +20,19 @@ Can always be overridden
 - Engage profile via `spring.profiles.active={profile name}`
 - If `spring.profiles.active` is empty, then will fallback to default value (Ex: port 8080)
 
+application.yaml example
+```yaml
+spring:
+  profiles: dev
+server:
+  port: 8000
+---
+spring:
+  profiles: test
+server:
+  port: 9000
+```
+
 ## Configuring Embedded Tomcat
 - For custom servlets, filters, and listeners add them as beans
 - Can configure via properties
@@ -32,8 +45,25 @@ Can always be overridden
   - server.compression.enabled
   - TLS configuration
   
-## Command Line Runner
+## Command Line Runner (CLR)
 - When you want a small body of work deployed as a task
 - You can run it as standalone spring app or run it as part of another spring
 boot app
 - `ApplicationRunner` similar
+
+## Spring Security
+- Can give you basic auth on all endpoints except common ones like /js or /css
+  - Just pulling in the basic security dependency does this
+  - password printed in log messages (default)
+  - mostly for local testing
+- Form based authentication
+  - default implementation relies on in memory username and passwords?
+  - full impl requires creating an extension of WebSecurityConfigurerAdapter and connecting to a db
+    - Use `@EnableWebSecurity` - turns off basic auth but enables more configuration
+- OAuth2 - support for OAuth2, server, and client
+  - `@EnableOAuth2Client`
+  - `@EnableAuthorizationServer` - create configurable auth server
+  - `@EnableResourceServer` - create configurable resource server
+- Passwords
+  - Should be hashed not encrypted
+  - SHA-1 is beaten

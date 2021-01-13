@@ -1,6 +1,6 @@
-# Spring Boot Tutorial
+# Room Web App
 
-Sample Spring Boot project created from a LinkedIn Learning course.
+Sample Spring Boot project from a LinkedIn Learning course.
 
 ## Build
 

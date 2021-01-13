@@ -69,7 +69,7 @@ boot app
   - SHA-1 is beaten
   
 ## Spring Boot Messaging
-- Publisher (Room Cleaner Notifier) and Consumer (room web app - RoomCleanerListener, AsyncConfig)
+- Publisher (Room Cleaner Notifier) and Consumer (room web app - `RoomCleanerListener`, `AsyncConfig`)
 
 ## Spring Data Rest Repositories
 - Adding this dependency (`spring-boot-starter-data-rest`) instantly exposes a basic REST API based on your existing
@@ -78,3 +78,11 @@ boot app
 
 ## Spring Actuator
 - Provides insights into running applications, allows for health checks/monitoring
+- health endpoint, simple up/down status
+- beans endpoint, info about beans in app
+- env endpoint, all env vars
+- info endpoint
+- metrics endpoint
+
+- Ensure actuator endpoints are not publicly available and only enable the endpoints you need
+- Can create new endpoints (room web app - `GreetingEndpoint`)

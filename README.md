@@ -16,5 +16,6 @@ cd bin
 ### [Room Web App](room-web-app/README.md)
 
 ## Helpful Links
+- [Notes](notes.md)
 - https://start.spring.io/
 - [LinkedIn Learning Course](https://www.linkedin.com/learning/spring-boot-2-0-essential-training-2/configuring-embedded-tomcat?u=2079044)

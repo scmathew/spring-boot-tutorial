@@ -10,6 +10,12 @@ cd bin
 ./start_postgres.sh
 ```
 
+### Start Rabbit MQ via Docker
+```bash
+cd bin
+./start_rabbit.sh.sh
+```
+
 ## Modules
 ### [Boot Tutorial](boot-tutorial/README.md)
 ### [Room CLR](room-clr/README.md)

@@ -20,6 +20,7 @@ cd bin
 ### [Boot Tutorial](boot-tutorial/README.md)
 ### [Room CLR](room-clr/README.md)
 ### [Room Web App](room-web-app/README.md)
+### [Room Cleaner Notifier](room-cleaner-notifier/README.md)
 
 ## Helpful Links
 - [Notes](notes.md)

@@ -8,8 +8,9 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  * DataSource Management for the Staff at the University.
- *
+ * Implements paging by extending PagingAndSortingRepository
  * Created by maryellenbowman
  */
 public interface StaffRepository extends PagingAndSortingRepository<Staff,Integer> {
+
 }

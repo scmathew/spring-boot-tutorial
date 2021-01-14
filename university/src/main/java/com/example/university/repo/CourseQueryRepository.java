@@ -18,18 +18,24 @@ public interface CourseQueryRepository extends ReadOnlyRepository<Course, Intege
 
     List<Course> findByDepartmentChairMemberLastName(String chair);
 
-    @Query("Select c from Course c where c.department.chair.member.lastName=:chair")
+    // JPQL
+    // Named query params
+    @Query("SELECT c FROM Course c WHERE c.department.chair.member.lastName=:chair")
     List<Course> findByChairLastName(@Param("chair")String chairLastName);
 
+    // Alternative option to named params, numbered params
     @Query("Select c from Course c join c.prerequisites p where p.id = ?1")
     List<Course> findCourseByPrerequisite(int id);
 
+    // Return Custom POJO with limited info
+    // Creating new object in query via constructor??
     @Query("Select new com.example.university.view.CourseView" +
             "(c.name, c.instructor.member.lastName, c.department.name) from Course c where c.id=?1")
     CourseView getCourseView(int courseId) ;
 
     List<Course> findByCredits(@Param("credits") int credits);
 
+    // Implements paging
     Page<Course> findByCredits(@Param("credits") int credits, Pageable pageable);
 
     Course findByDepartmentName(String deptName);

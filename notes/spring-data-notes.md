@@ -9,10 +9,13 @@
 - JpaRepository is built on top of CrudRepository
     - CRUD + flush + saveAndFlush + deleteInBatch + deleteAllInBatch
 - Simple Query Method Property Expression Rules 
-    - Return `type`
-    - start with `findBy` (?)
-    - include attribute name of Java obj (camel case)
+    1. Return `type`
+    2. start with `findBy` (?)
+    3. include attribute name of Java obj (camel case)
         - Ex: `findByAge`
-    - Optionally, chain subattribute names
+    4. Optionally, chain subattribute names
         - Ex: `findByAttendeeLastName`
         - Where attendee is an object on the Student class
+    - Examples found in `university` module `QueryDemos`
+    
+

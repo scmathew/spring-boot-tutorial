@@ -139,15 +139,20 @@ public class QueryDemos {
                 PageRequest.of(0, 4, Sort.Direction.ASC, "credits", "name"));
         courses.forEach(System.out::println);
 
-//        System.out.println("\nFind all staff members, sort alphabetically by last name");
-//        Sort sortByLastName = new Sort(Sort.Direction.ASC, "member.lastName");
-//        staffRepository.findAll(sortByLastName).forEach(System.out::println);
+        System.out.println("\nFind all staff members, sort alphabetically by last name");
+        Sort sortByLastName = Sort.by(Sort.Direction.ASC, "member.lastName");
+        staffRepository.findAll(sortByLastName).forEach(System.out::println);
 
-//        Page<Staff> members = staffRepository.findAll(PageRequest.of(0, 5, sortByLastName));
-//        System.out.println("\nTotal number of staff members=" + members.getTotalElements());
-//        System.out.println("Total number of 5-element-pages=" + members.getTotalPages());
-//        System.out.println("Find first 5 Staff members, sort alphabetically by last name");
-//        members.forEach(System.out::println);
+        Page<Staff> members = staffRepository.findAll(PageRequest.of(0, 5, sortByLastName));
+        System.out.println("\nTotal number of staff members=" + members.getTotalElements());
+        System.out.println("Total number of 5-element-pages=" + members.getTotalPages());
+        System.out.println("Find first 5 Staff members, sort alphabetically by last name");
+        members.forEach(System.out::println);
+
+        members = staffRepository.findAll(PageRequest.of(1, 5, sortByLastName));
+        System.out.println("\nSecond page of staff members, sorted alphabetically by last name");
+        members.forEach(System.out::println);
+
     }
 
     /**

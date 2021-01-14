@@ -14,14 +14,22 @@ public interface StudentQueryRepository extends ReadOnlyRepository<Student, Inte
     List<Student> findByAge(Integer age);
     List<Student> findByAttendeeLastName(String last);
 
-    //Query Methods with Clauses and Exrpessions
+    //Query Methods with Clauses and Expressions
     Student findByAttendeeFirstNameAndAttendeeLastName(String firstName, String lastName);
     Student findByAttendee(Person person);
+
     List<Student> findByAgeGreaterThan(int minimumAge);
     List<Student> findByAgeLessThan(int maximumAge);
+
     List<Student> findByAttendeeLastNameIgnoreCase(String lastName);
     List<Student> findByAttendeeLastNameLike(String likeString);
+
+    // Find highest student by alphabet
+    // Pay attention: findFirst ByOrder ByAttendeeLastName Asc
     Student findFirstByOrderByAttendeeLastNameAsc();
+
+    // Find oldest student
     Student findTopByOrderByAgeDesc();
+    // Find 3 oldest students
     List<Student> findTop3ByOrderByAgeDesc();
 }

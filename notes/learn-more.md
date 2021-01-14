@@ -2,3 +2,4 @@
 
 - `@Bean` understand this annotation more
 - `@Autowired` understand this annotation more
+- Spring Boot with Mongo/NoSQL (skipped that lesson)

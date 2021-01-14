@@ -21,6 +21,7 @@ cd bin
 ### [Room CLR](room-clr/README.md)
 ### [Room Web App](room-web-app/README.md)
 ### [Room Cleaner Notifier](room-cleaner-notifier/README.md)
+### [University (Spring Data)](university/README.md)
 
 ## Helpful Links
 - [Notes](notes/misc-notes.md)

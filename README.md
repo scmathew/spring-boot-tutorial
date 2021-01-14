@@ -17,7 +17,7 @@ cd bin
 ```
 
 ## Modules
-### [Boot Tutorial](boot-tutorial/README.md)
+### [Boot Tutorial (Spring Boot in Docker)](boot-tutorial/README.md)
 ### [Room CLR](room-clr/README.md)
 ### [Room Web App](room-web-app/README.md)
 ### [Room Cleaner Notifier](room-cleaner-notifier/README.md)

@@ -48,5 +48,16 @@ connections
 - Spring Data Key Value
 
 ## Query DSL
-- Use `BooleanExpression` (`Predicate`) to simply queries
+- Use `BooleanExpression` to simplify queries
 ![Slide](images/Dynamic-Queries-Slide.png)
+  
+## Auditing
+- `@CreatedDate`, `@LastModifiedBy` add to columns on POJO will insert 
+dates on change automatically 
+- Or have POJO extend `AbstractAuditable`
+
+- `AuditorAware` service??
+
+## Read Only Repository 
+- `@NoRepositoryBean`
+- Extend `Repository`

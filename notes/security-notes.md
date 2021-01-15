@@ -1,4 +1,5 @@
 # Spring Security
+- Provides Jakarta EE application security services
 - Can give you basic auth on all endpoints except common ones like /js or /css
     - Just pulling in the basic security dependency does this
     - password printed in log messages (default)

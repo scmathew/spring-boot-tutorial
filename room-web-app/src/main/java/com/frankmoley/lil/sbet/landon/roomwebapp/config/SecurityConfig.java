@@ -1,12 +1,21 @@
 package com.frankmoley.lil.sbet.landon.roomwebapp.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -26,11 +35,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout().permitAll();
     }
 
-    @Autowired
-    public void ConfigureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        // Only for demo purposes, not production which is NoOpPasswordEncoder is deprecated
-        auth.inMemoryAuthentication().passwordEncoder(NoOpPasswordEncoder.getInstance())
-                .withUser("user").password("password").roles("USER");
-
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        UserDetails user1 = User
+                .withDefaultPasswordEncoder()
+                .username("user")
+                .password("password")
+                .roles("USER", "ADMIN")
+                .build();
+        UserDetails user2 = User
+                .withDefaultPasswordEncoder()
+                .username("user2")
+                .password("password")
+                .roles("USER")
+                .build();
+        // Only for demo purposes, never use in mem for prod systems
+        return new InMemoryUserDetailsManager(Arrays.asList(user1, user2));
     }
 }

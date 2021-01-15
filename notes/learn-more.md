@@ -4,3 +4,4 @@
 - `@Autowired` understand this annotation more
 - Spring Boot with Mongo/NoSQL (skipped that lesson)
 - What repository should we default to? `JpaRepository` vs `CrudRepository`?
+    - Use JPA when you want paging functionality
